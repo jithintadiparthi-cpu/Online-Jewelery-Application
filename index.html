@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TMR Jewellery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="offer-banner">
+      🎉 Flat 20% OFF on Diamond Jewellery | Free Shipping Across India
+    </div>
+    <header class="header">
+      <div class="logo">💎 TMR Jewellery</div>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search Jewellery..."
+          onkeypress="if (event.key === 'Enter') searchProducts();"
+        />
+        <button onclick="searchProducts()">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <a href="#" onclick="showPage('home')">Home</a>
+
+        <a href="#" onclick="showPage('shop')">Shop</a>
+
+        <a href="#" onclick="showPage('contact')">Contact</a>
+
+        <a href="cart.html" class="cart">
+          🛒 Cart <span id="cart-count">0</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <div id="contact" class="page">
+          <h1>Contact Us</h1>
+
+          <h3>TMR Jewellery</h3>
+
+          <p>📞 Mobile: 9246927456</p>
+
+          <p>📧 Email: tmrnrt77@gmail.com</p>
+
+          <p>
+            Thank you for choosing TMR Jewellery. Feel free to contact us for
+            orders, support, and jewellery inquiries.
+          </p>
+        </div>
+
+        <div id="home" class="page">
+          <div class="hero-section">
+            <div class="hero-text">
+              <h1>Welcome to TMR Jewellers</h1>
+
+              <p>
+                Discover elegant Rings, Necklaces, Earrings, and Bracelets
+                crafted with perfection.
+              </p>
+
+              <p>
+                Trusted quality, premium designs, and exclusive collections for
+                every occasion.
+              </p>
+
+              <button onclick="showPage('shop')">Shop Now</button>
+            </div>
+
+            <div class="hero-image">
+              <img
+                src="E:\mini_project\shopname logo.png"
+                alt="Premium Gold Jewellery"
+              />
+            </div>
+          </div>
+
+          <h1>Welcome to TMR Jewellery</h1>
+
+          <p>
+            TMR Jewellery is your trusted destination for elegant and premium
+            jewellery collections. We offer Rings, Necklaces, Earrings, and
+            Bracelets designed for every occasion.
+          </p>
+
+          <p>
+            Our mission is to provide quality jewellery with beautiful
+            craftsmanship and affordable pricing.
+          </p>
+
+          <img
+            src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca5?w=1200"
+            width="100%"
+            style="border-radius: 15px; max-height: 400px; object-fit: cover"
+          />
+        </div>
+
+        <!-- RINGS -->
+
+        <div id="shop" class="page">
+          <div class="shop-layout">
+            <div class="categories">
+              <h3>Categories</h3>
+
+              <button onclick="showCategory('rings')">Rings</button>
+
+              <button onclick="showCategory('necklaces')">Necklaces</button>
+
+              <button onclick="showCategory('earrings')">Earrings</button>
+
+              <button onclick="showCategory('bracelets')">Bracelets</button>
+            </div>
+          </div>
+          <div id="rings" class="products">
+            <div class="product" data-category="rings">
+              <img
+                src="https://charlesschwartz.com/wp-content/uploads/2015/08/4-WB-Sapphire-Pair-2405S-Engagment_Group.jpg"
+              />
+              <h3>Diamond Ring</h3>
+              <p>$450</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Diamond Ring',
+                    450,
+                    'https://charlesschwartz.com/wp-content/uploads/2015/08/4-WB-Sapphire-Pair-2405S-Engagment_Group.jpg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="rings">
+              <img
+                src="https://cdn.pixabay.com/photo/2018/08/16/19/56/wedding-rings-3611277_1280.jpg"
+              />
+              <h3>Gold Ring</h3>
+              <p>$350</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Gold Ring',
+                    350,
+                    'https://cdn.pixabay.com/photo/2018/08/16/19/56/wedding-rings-3611277_1280.jpg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="rings">
+              <img
+                src="https://i5.walmartimages.com/seo/Newshe-Wedding-Ring-Set-For-Woman-925-Sterling-Silver-Engagement-Rings-Halo-Cz-Round-5A-Size-8_3c0d34e7-c35d-4a92-8893-35130c909d0e.5d8b48990532a9c358612905c71e7a32.jpeg"
+              />
+              <h3>Silver Ring</h3>
+              <p>$220</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Silver Ring',
+                    220,
+                    'https://i5.walmartimages.com/seo/Newshe-Wedding-Ring-Set-For-Woman-925-Sterling-Silver-Engagement-Rings-Halo-Cz-Round-5A-Size-8_3c0d34e7-c35d-4a92-8893-35130c909d0e.5d8b48990532a9c358612905c71e7a32.jpeg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="rings">
+              <img
+                src="https://i5.walmartimages.com/seo/Engagement-Ring-Set-Platinum-Plated-Sterling-Silver-Wedding-Ring-Set-for-Women-Simulated-Diamond-Halo-Bridal-Ring_5b970d1c-2222-4828-9cab-1dbb508ef379.160d43901f7c3b77dacb4e9f463e81c5.jpeg"
+              />
+              <h3>Platinum Ring</h3>
+              <p>$520</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Platinum Ring',
+                    520,
+                    'https://i5.walmartimages.com/seo/Engagement-Ring-Set-Platinum-Plated-Sterling-Silver-Wedding-Ring-Set-for-Women-Simulated-Diamond-Halo-Bridal-Ring_5b970d1c-2222-4828-9cab-1dbb508ef379.160d43901f7c3b77dacb4e9f463e81c5.jpeg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- NECKLACES -->
+
+          <div id="necklaces" class="products">
+            <div class="product" data-category="necklaces">
+              <img
+                src="https://c8.alamy.com/comp/DNT2YC/gold-jewelry-little-india-singapore-DNT2YC.jpg"
+              />
+              <h3>Gold Necklace</h3>
+              <p>$600</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Gold Necklace',
+                    600,
+                    'https://c8.alamy.com/comp/DNT2YC/gold-jewelry-little-india-singapore-DNT2YC.jpg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="necklaces">
+              <img
+                src="https://www.jewelry-world.org/wp-content/uploads/2017/11/beautiful-bridal-wedding-Pearl-necklace-design.jpg"
+              />
+              <h3>Pearl Necklace</h3>
+              <p>$420</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Pearl Necklace',
+                    420,
+                    'https://www.jewelry-world.org/wp-content/uploads/2017/11/beautiful-bridal-wedding-Pearl-necklace-design.jpg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="necklaces">
+              <img
+                src="https://i.pinimg.com/originals/1b/b8/5d/1bb85d78ce1f69da916322f231ad2fe3.png"
+              />
+              <h3>Diamond Necklace</h3>
+              <p>$750</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Diamond Necklace',
+                    750,
+                    'https://i.pinimg.com/originals/1b/b8/5d/1bb85d78ce1f69da916322f231ad2fe3.png',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="necklaces">
+              <img
+                src="https://www.kendrascott.com/on/demandware.static/-/Sites-kendrascott/default/dwf0d31e4d/Winter-2-2022/Product-Images/kendra-scott-annie-infinity-pendant-necklace-silver-white-crystal-01.jpeg"
+              />
+              <h3>Silver Necklace</h3>
+              <p>$300</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Silver Necklace',
+                    300,
+                    'https://www.kendrascott.com/on/demandware.static/-/Sites-kendrascott/default/dwf0d31e4d/Winter-2-2022/Product-Images/kendra-scott-annie-infinity-pendant-necklace-silver-white-crystal-01.jpeg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- EARRINGS -->
+
+          <div id="earrings" class="products">
+            <div class="product" data-category="earrings">
+              <img
+                src="https://i5.walmartimages.com/seo/ChicSilver-925-Sterling-Silver-Small-Hoop-Earrings-for-Women-Cubic-Zirconia-8MM_13181372-3aec-4b3f-95eb-d1c56bd70729.681017d094947140b7284e627ee14d29.jpeg"
+              />
+              <h3>Silver Earrings</h3>
+              <p>$150</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Silver Earrings',
+                    150,
+                    'https://i5.walmartimages.com/seo/ChicSilver-925-Sterling-Silver-Small-Hoop-Earrings-for-Women-Cubic-Zirconia-8MM_13181372-3aec-4b3f-95eb-d1c56bd70729.681017d094947140b7284e627ee14d29.jpeg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="earrings">
+              <img
+                src="https://www.diamondstuds.com/news/wp-content/uploads/2020/06/IArz1xBX.jpeg"
+              />
+              <h3>Diamond Earrings</h3>
+              <p>$520</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Diamond Earrings',
+                    520,
+                    'https://www.diamondstuds.com/news/wp-content/uploads/2020/06/IArz1xBX.jpeg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="earrings">
+              <img src="https://i.ytimg.com/vi/N-vkcRFL_8A/maxresdefault.jpg" />
+              <h3>Gold Earrings</h3>
+              <p>$300</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Gold Earrings',
+                    300,
+                    'https://i.ytimg.com/vi/N-vkcRFL_8A/maxresdefault.jpg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="earrings">
+              <img
+                src="https://cdn0.weddingwire.com/article/3340/original/1920/jpeg/20433-1-bhldn-nicola-bathie-mae-earrings-pearl-wedding-earrings.jpeg"
+              />
+              <h3>Pearl Earrings</h3>
+              <p>$210</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Pearl Earrings',
+                    210,
+                    'https://cdn0.weddingwire.com/article/3340/original/1920/jpeg/20433-1-bhldn-nicola-bathie-mae-earrings-pearl-wedding-earrings.jpeg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- BRACELETS -->
+
+          <div id="bracelets" class="products">
+            <div class="product" data-category="bracelets">
+              <img
+                src="https://www.kalyanjewellers.net/images/Jewellery/Gold/images/PEKHAM-SANKALP-GOLD-BRACELET.jpg"
+              />
+              <h3>Gold Bracelet</h3>
+              <p>$300</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Gold Bracelet',
+                    300,
+                    'https://www.kalyanjewellers.net/images/Jewellery/Gold/images/PEKHAM-SANKALP-GOLD-BRACELET.jpg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="bracelets">
+              <img
+                src="https://i.etsystatic.com/9213817/r/il/edae19/2903184930/il_1080xN.2903184930_gt3g.jpg"
+              />
+              <h3>Silver Bracelet</h3>
+              <p>$180</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Silver Bracelet',
+                    180,
+                    'https://i.etsystatic.com/9213817/r/il/edae19/2903184930/il_1080xN.2903184930_gt3g.jpg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="bracelets">
+              <img
+                src="https://dreamdiamonds.com.au/cdn/shop/articles/Perfect_Tennis_Bracelet_Guide_1400x.webp?v=1742406732"
+              />
+              <h3>Diamond Bracelet</h3>
+              <p>$550</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Diamond Bracelet',
+                    550,
+                    'https://dreamdiamonds.com.au/cdn/shop/articles/Perfect_Tennis_Bracelet_Guide_1400x.webp?v=1742406732',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="product" data-category="bracelets">
+              <img
+                src="https://casolia.com/wp-content/uploads/2025/07/image0_diy-pearl-bracelet-ideas_diy-pearl-bracelet-ideas.jpg"
+              />
+              <h3>Pearl Bracelet</h3>
+              <p>$260</p>
+              <button
+                onclick="
+                  addToCart(
+                    'Pearl Bracelet',
+                    260,
+                    'https://casolia.com/wp-content/uploads/2025/07/image0_diy-pearl-bracelet-ideas_diy-pearl-bracelet-ideas.jpg',
+                  )
+                "
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="scripts.js"></script>
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>TMR Vijayalakshmi Jewellers</h3>
+            <p>Premium Jewellery Collections for Every Occasion.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+
+            <p>
+                <a href="https://wa.me/919246927456" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+class="footer-icon">
+WhatsApp Us 
+</a>
+            </p>
+
+            <p>
+                <a href="https://instagram.com/tmr_vijayalakshmi_jewellers"
+target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+class="footer-icon">
+@tmr_vijayalakshmi_jewellers
+</a>
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('shop')">Shop</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 TMR Vijayalakshmi Jewellers | All Rights Reserved
+    </div>
+
+</footer>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Shopping Cart</h1>
+      <a href="index.html" class="back-btn">
+    ← Back To Shopping
+</a>
+    </header>
+
+    <div class="cart-container">
+      <h2>Your Cart</h2>
+
+      <div id="cartItems"></div>
+
+      <h3 id="totalAmount">Total: $0</h3>
+
+      <button id="buyBtn">Buy Now</button>
+    </div>
+
+    <script>
+
+let cart =
+JSON.parse(localStorage.getItem("cart")) || [];
+
+let container =
+document.getElementById("cartItems");
+
+let total = 0;
+
+cart.forEach(item=>{
+
+total += item.price;
+
+container.innerHTML += `
+
+<div class="cart-item">
+
+<img src="${item.image}">
+
+<div>
+
+<h3>${item.name}</h3>
+
+<p>$${item.price}</p>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("totalAmount")
+.innerHTML = "Total: $" + total;
+
+document.getElementById("buyBtn")
+.onclick = function(){
+
+if(cart.length===0){
+
+alert("Cart is Empty");
+return;
+
+}
+
+alert(
+"Order Placed Successfully!\nTotal Amount: $" + total
+);
+
+localStorage.removeItem("cart");
+
+location.reload();
+
+};
+
+</script>
+  </body>
+</html>
